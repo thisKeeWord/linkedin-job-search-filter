@@ -1,0 +1,32 @@
+body {
+	width: 600px;
+	background: #B4D8E7;
+	font-family: 'Hind', sans-serif;
+}
+h1 {
+	text-align: center;
+	font-size: 22px;
+	font-weight: 200;
+	width: 500px;
+	margin: 25px auto 25px auto;
+}
+form {
+	margin-bottom: 15px;
+}
+#input-box {
+	width: 450px;
+	height: 35px;
+	margin: 25px 0 15px 16px;
+	font-size: 16px;
+	text-indent: 5px;
+	padding-bottom: 0;
+	border: 1px solid #999;
+	border-radius: 5px;
+	background: #f5fafa;
+}
+#input-box:focus {
+	outline: none;
+}
+.btn {
+	margin-left: 14px;
+}
