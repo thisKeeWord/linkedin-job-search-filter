@@ -54,14 +54,14 @@ form.addEventListener('submit', function(event) {
 	if(question.slice(-1) === '?') {
 		chrome.tts.speak(advice, {
 			'gender': 'female',
-			'lang': 'en-US',
+			'lang': 'en-GB',
 			'rate': 1.0
 		});
 		advice = generationAdvice();
 	} else {
 		chrome.tts.speak('Please ask a question', {
-			'lang': 'en-US',
-			'gender': 'female',
+			'lang': 'en-GB',
+			'gender': 'male',
 			'rate': 1.0
 		});
 	}

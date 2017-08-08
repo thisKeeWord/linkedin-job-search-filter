@@ -1,0 +1,39 @@
+{
+  "name": "Advice Generator",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "This app will give you advice about you ideas!",
+  "icons": {
+    "16": "app/images/icon-16.png",
+    "128": "app/images/icon-128.png"
+  },
+  "default_locale": "en",
+  "browser_action": {
+    "default_icon": {
+      "19": "app/images/icon-19.png",
+      "38": "app/images/icon-38.png"
+    },
+    "default_title": "Advice Generator",
+    "default_popup": "app/popup.html"
+  },
+  "omnibox": {
+    "keyword": "Advice Generator"
+  },
+  "permissions": ["ttsEngine", "tts"],
+        "tts_engine": {
+          "voices": [
+            {
+              "voice_name": "Alice",
+              "lang": "en-US",
+              "gender": "female",
+              "event_types": ["start", "marker", "end"]
+            },
+            {
+              "voice_name": "Alex",
+              "lang": "en-US",
+              "gender": "male",
+              "event_types": ["start", "marker", "end"]
+            }
+          ]
+        }
+}
