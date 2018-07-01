@@ -1,9 +1,14 @@
 'use strict';
 
-chrome.runtime.onInstalled.addListener(details => {
-  console.log('previousVersion', details.previousVersion);
+var views = chrome.extension.getViews({
+	type: 'popup'
 });
-
-chrome.browserAction.setBadgeText({text: '\'Allo'});
-
-console.log('\'Allo \'Allo World! Event Page for Browser Action');
+console.log('yo')
+if (location.href.includes('https://www.linkedin.com/jobs/search/')) {
+  console.log('in url')
+	for (var i = 0; i < $('.job-card-search__company-name-link').length; i++) {
+		if ($($('.job-card-search__company-name-link')[i]).children()[0].innerText === 'VirtualVocations' || $($('.job-card-search__company-name-link')[i]).children()[0].innerText === 'Cybercoders') {
+			$('.job-card-search__company-name-link')[i].remove();
+		}
+	}
+}
