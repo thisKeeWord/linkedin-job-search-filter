@@ -11,9 +11,9 @@
     "default_icon": {
       "19": "app/images/linkedin.png"
     },
-    "default_title": "Linkedin Job Search Company Filter"
+    "default_title": "Linkedin Job Search Company Filter",
+    "default_popup": "app/popup.html"
   },
-  
   "content_scripts": [
     {
       "matches": ["https://www.linkedin.com/jobs/search/*"],

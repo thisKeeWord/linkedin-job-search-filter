@@ -6,5 +6,5 @@ setInterval(function() {
 			$(companyList[i]).parent().parent().parent().parent().parent().remove();
 		}
 	}
-}, 2000);
+}, 0000);
 // }

@@ -1,15 +1,17 @@
 'use strict';
 
-var views = chrome.extension.getViews({
-	type: 'popup'
-});
 
-chrome.tabs.executeScript(tabId, details, function() {
-	if (location.href.includes('https://www.linkedin.com/jobs/search/')) {
-		for (var i = 0; i < $('.job-card-search__company-name-link').length; i++) {
-			if ($($('.job-card-search__company-name-link')[i]).children()[0].innerText === 'VirtualVocations' || $($('.job-card-search__company-name-link')[i]).children()[0].innerText === 'Cybercoders') {
-				$('.job-card-search__company-name-link')[i].remove();
-			}
-		}
-	}
+var form = document.getElementById("companyFilter");
+form.addEventListener("submit", function(e) {
+	e.preventDefault();
+	var input = document.getElementById('input-box');
+
+	console.log(e.target.value, 'hello')
+	chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+		chrome.tabs.sendMessage(tabs[0].id, {data: input.value}, function(response) {
+			$('#status').html('changed data in page');
+			console.log('success');
+		});
+	});
+	
 });
