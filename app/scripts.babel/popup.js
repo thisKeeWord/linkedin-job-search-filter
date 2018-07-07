@@ -27,3 +27,9 @@ form.addEventListener("submit", function(e) {
 		});
 	}
 });
+
+
+// once user wants to add company again, should be able to add results again
+// remove using detach(), re-add using prepend();
+// save detached results to storage or something
+// $(".card-list").prepend();
