@@ -25,3 +25,9 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
 		}, 0000);
 	// }
 });
+
+// user types into popup. company gets added to storage and sent 
+// to content_script. user sees their option from popupand can remove.
+// if user removes company, company should get removed from storage
+// and sent to content_script to update dom.
+// so content_script should be the communicator to the dom
